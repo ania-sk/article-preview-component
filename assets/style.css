@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 13px;
+    color: hsl(214, 17%, 51%);
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    width: 730px;
+    height: 280px;
+
+    background-color: white;  
+    border-radius: 1rem; 
+    box-shadow: 10px 10px 40px hsl(212, 23%, 69%,0.25);
+    position: relative;
+}
+
+.image-conteiner{
+    width: 100%;   
+    height: 280px;     
+    overflow: hidden;      
+}
+
+.main-img{       
+    height: 100%;   
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.card-text-content{
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.heading{
+    color: hsl(217, 19%, 35%); 
+    font-weight: 700; 
+    font-size: 1.25rem;     
+    margin-bottom: 0.75rem;
+}
+
+.description{   
+    line-height: 1.5;
+    padding-right: 0.5rem;
+}
+
+.footer-conteiner{
+    display: flex;
+    align-items: center;    
+    gap: 10rem;
+    margin: 1.25rem 0;    
+}
+
+.avatar-info-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar img{
+    height: 40px;
+    border-radius: 50%;
+}
+
+.name{
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+}
+
+.date{
+    color: hsl(212, 23%, 69%);
+    font-size: 0.75rem;
+}
+
+.shere-btn{
+    justify-self: flex-end;
+    border: none;
+    border-radius: 50%;
+    padding: 0.7rem;
+    background-color: hsl(210, 46%, 95%);
+    cursor: pointer; 
+    color: hsl(217, 19%, 35%);   
+}
+
+.shere-btn:active{
+    transform: scale(0.95);
+}
+
+.path-arrow {
+    fill: hsl(214, 17%, 51%);
+}
+
+.path-arrow:hover{
+    fill: hsl(210, 46%, 95%);    
+}
+
+.shere-btn:hover{
+    background-color: hsl(214, 17%, 51%);      
+}
+
+.icon:hover{
+    cursor: pointer;      
+}
+
+.shere-bar{
+    display: none;
+}
+
+.footer-conteiner.active .shere-bar{
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    border-radius: 0.8rem;
+
+    gap: 1.25rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: hsl(212, 23%, 69%);    
+}
+
+@media(min-width: 851px){
+    .shere-bar {
+        position: absolute;
+        top: 8rem;
+        right: -4rem;
+    }
+
+    .shere-bar::before {
+        border-style: solid;
+        border-width: 1rem 1rem 0 1rem;
+        border-color: hsl(217, 19%, 35%) transparent;
+        content: "";
+        position: absolute;
+        right: 7.25rem;
+        top: 3.6rem;
+    }
+}
+
+@media(max-width: 850px){
+    .card {
+        flex-direction: column;
+        width: 80vw;
+        height: fit-content;
+    }
+    .main-img {
+        height: auto;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+        width: 100%;
+    }
+
+    .card-text-content {
+        padding: 0;
+    }
+
+    .heading {
+        padding: 2rem 2.4rem 0 2.4rem;
+    }
+
+    .description {
+        padding: 0 2.4rem;
+    }
+
+    .footer-conteiner {
+        gap: 1rem;
+        justify-content: space-around;
+        padding: 1.5rem 2.4rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        margin-bottom: 0;
+    }
+
+    .footer-conteiner.active .shere-bar{
+        padding: 0;
+    }
+
+    .footer-conteiner.active .avatar-info-conteiner{
+        display: none;
+    }
+
+    .footer-conteiner.active{
+        background-color: hsl(217, 19%, 35%);
+    }
+
+    .footer-conteiner.active .shere-btn {
+        background-color: hsl(214, 17%, 51%);
+    }
+
+    .footer-conteiner.active .path-arrow {
+        fill: hsl(210, 46%, 95%);
+    }
+}
+
